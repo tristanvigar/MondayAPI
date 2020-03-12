@@ -1,6 +1,8 @@
 ###
 ### Monday API Functions
 ###
+### Written by: Tristan Vigar / tristanvigar@protonmail.com
+###
 
 import requests
 api_url = 'https://api.monday.com'
