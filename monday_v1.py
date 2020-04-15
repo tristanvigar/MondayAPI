@@ -164,7 +164,7 @@ def delete_pulse(secret, api_url, pulse_id, archive_pulse=False):
     r = requests.delete(url=api_url+endpoint, data=data)
     return r.status_code
 
-def get_pulse_subscribers(secret, api_url, pulse_id, page_offset=0, results_per_page=25, result_offset=0)
+def get_pulse_subscribers(secret, api_url, pulse_id, page_offset=0, results_per_page=25, result_offset=0):
     data = {
             'api_key': secret,
             'id': pulse_id,
@@ -317,7 +317,7 @@ def create_group_in_board(secret, api_url, board_id, group_title):
     r = requests.post(url=api_url+endpoint, data=data)
     return r.status_code
 
-def move_group_to board(secret, api_url, board_id, group_id, user_id, destination_board_id):
+def move_group_to_board(secret, api_url, board_id, group_id, user_id, destination_board_id):
     data = {
             'api_key': secret,
             'board_id': board_id,
