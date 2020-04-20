@@ -27,7 +27,7 @@ def get_user(secret, api_url, user_id):
             'id': user_id
            }
     endpoint = f'/v1/users/{user_id}.json'
-    r = requests.get(url=url+endpoint, data=data)
+    r = requests.get(url=api_url+endpoint, data=data)
     return r
 
 def get_specific_user_post(secret, api_url, user_id, page_offset=0, results_per_page=25, result_offset=0):
