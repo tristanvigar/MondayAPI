@@ -21,7 +21,7 @@ def get_all_users(secret, api_url, page_offset=0, results_per_page=25, result_of
     r = requests.get(url=api_url+endpoint, data=data)
     return r
 
-def get_user(secret, user_id):
+def get_user(secret, api_url, user_id):
     data = {
             'api_key': secret,
             'id': user_id
