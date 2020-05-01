@@ -193,7 +193,7 @@ def delete_pulse_subscriber(secret, api_url, pulse_id, user_id):
             'id': pulse_id,
             'user_id': user_id,
            }
-    endpoint = '/v1/pulses/{pulse_id}/subscribers/{user_id}.json'
+    endpoint = f'/v1/pulses/{pulse_id}/subscribers/{user_id}.json'
     r = requests.delete(url=api_url+endpoint, data=data)
     return r.status_code
 
@@ -202,7 +202,7 @@ def get_notes_from_pulse(secret, api_url, pulse_id):
             'api_key': secret,
             'id': pulse_id,
            }
-    endpoint = '/v1/pulses/{pulse_id}/notes.json'
+    endpoint = f'/v1/pulses/{pulse_id}/notes.json'
     r = requests.get(url=api_url+endpoint, data=data)
     return r
 
@@ -216,7 +216,7 @@ def create_pulse_note(secret, api_url, pulse_id, note_title, note_content, user_
             'user_id': user_id,
             'create_update': create_update_notification,
            }
-    endpoint = '/v1/pulses/{pulse_id}/notes.json'
+    endpoint = f'/v1/pulses/{pulse_id}/notes.json'
     r = requests.post(url=api_url+endpoint, data=data)
     return r.status_code
 
@@ -226,7 +226,7 @@ def delete_pulse_note(secret, api_url, pulse_id, note_id):
             'id': pulse_id,
             'note_id': note_id,
            }
-    endpoint = '/v1/pulses/{pulse_id}/notes/{note_id}.json'
+    endpoint = f'/v1/pulses/{pulse_id}/notes/{note_id}.json'
     r = requests.delete(url=api_url+endpoint, data=data)
     return r.status_code
 
@@ -237,7 +237,7 @@ def get_pulse_updates(secret, api_url, pulse_id, updates_page, results_per_page=
             'page': updates_page,
             'limit': results_per_page,
            }
-    endpoint = '/v1/pulses/{pulse_id}/updates.json'
+    endpoint = f'/v1/pulses/{pulse_id}/updates.json'
     r = requests.get(url=api_url+endpoint, data=data)
     return r
 
